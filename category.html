@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - Northstar Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-shell">
+            <div class="logo">
+                <span class="logo-mark">✦</span>
+                <span>Northstar</span>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="category.html" class="active">Category</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn-primary">Login</a>
+                <div class="cart-pill" aria-label="Shopping cart summary">
+                    🛒
+                    <span>Cart</span>
+                    <span class="cart-pill-count" id="cartPillCount">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-shell">
+            <section class="page-header reveal">
+                <h1>Shop our best-selling collection</h1>
+                <p>Browse premium items tailored to modern lifestyles, all in one clean, easy-to-navigate catalog.</p>
+            </section>
+
+            <div class="category-tabs reveal">
+                <button class="tab-btn active" data-category="all">All Products</button>
+                <button class="tab-btn" data-category="electronics">Electronics</button>
+                <button class="tab-btn" data-category="fashion">Fashion</button>
+                <button class="tab-btn" data-category="home">Home & Living</button>
+                <button class="tab-btn" data-category="books">Books</button>
+            </div>
+
+            <section class="product-grid reveal" id="productGrid">
+                <div class="product-card reveal" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Wireless Headphones">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Wireless Bluetooth Headphones</h3>
+                        <div class="product-rating">⭐⭐⭐⭐⭐ (128)</div>
+                        <p class="product-desc">Premium sound quality with noise cancellation, 30-hour battery life.</p>
+                        <div class="product-price">
+                            <span class="price">$79.99</span>
+                            <span class="old-price">$99.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Wireless Bluetooth Headphones', 79.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop" alt="Smart Watch">
+                        <span class="product-badge sale">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Fitness Watch Pro</h3>
+                        <div class="product-rating">⭐⭐⭐⭐☆ (89)</div>
+                        <p class="product-desc">Track heart rate, sleep, and 20+ sports modes. Waterproof design.</p>
+                        <div class="product-price">
+                            <span class="price">$149.99</span>
+                            <span class="old-price">$199.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Smart Fitness Watch Pro', 149.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" data-category="fashion">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=300&fit=crop" alt="Leather Jacket">
+                        <span class="product-badge bestseller">Bestseller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Leather Jacket</h3>
+                        <div class="product-rating">⭐⭐⭐⭐⭐ (215)</div>
+                        <p class="product-desc">Genuine leather, classic design. Available in 5 colors.</p>
+                        <div class="product-price">
+                            <span class="price">$189.99</span>
+                            <span class="old-price">$249.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Premium Leather Jacket', 189.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" data-category="fashion">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop" alt="Running Shoes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ultra Comfort Running Shoes</h3>
+                        <div class="product-rating">⭐⭐⭐⭐☆ (156)</div>
+                        <p class="product-desc">Lightweight, breathable, with memory foam insole.</p>
+                        <div class="product-price">
+                            <span class="price">$109.99</span>
+                            <span class="old-price">$139.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Ultra Comfort Running Shoes', 109.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" data-category="home">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&h=300" alt="Coffee Maker">
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Coffee Maker Pro</h3>
+                        <div class="product-rating">⭐⭐⭐⭐⭐ (203)</div>
+                        <p class="product-desc">Programmable, 12-cup capacity, keep-warm function.</p>
+                        <div class="product-price">
+                            <span class="price">$89.99</span>
+                            <span class="old-price">$119.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Smart Coffee Maker Pro', 89.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" data-category="home">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=300&fit=crop" alt="LED Desk Lamp">
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart LED Desk Lamp</h3>
+                        <div class="product-rating">⭐⭐⭐⭐☆ (67)</div>
+                        <p class="product-desc">Touch control, 5 brightness levels, USB charging port.</p>
+                        <div class="product-price">
+                            <span class="price">$39.99</span>
+                            <span class="old-price">$49.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Smart LED Desk Lamp', 39.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" data-category="books">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&h=300&fit=crop" alt="Web Development Book">
+                    </div>
+                    <div class="product-info">
+                        <h3>Web Development Mastery</h3>
+                        <div class="product-rating">⭐⭐⭐⭐⭐ (342)</div>
+                        <p class="product-desc">Complete guide to HTML, CSS, JavaScript, and React.</p>
+                        <div class="product-price">
+                            <span class="price">$34.99</span>
+                            <span class="old-price">$44.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Web Development Mastery', 34.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card reveal" data-category="books">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop" alt="Design Book">
+                    </div>
+                    <div class="product-info">
+                        <h3>UI/UX Design Principles</h3>
+                        <div class="product-rating">⭐⭐⭐⭐☆ (189)</div>
+                        <p class="product-desc">Master user experience design with real-world examples.</p>
+                        <div class="product-price">
+                            <span class="price">$29.99</span>
+                            <span class="old-price">$39.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('UI/UX Design Principles', 29.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>About</h4>
+                <p>Northstar helps shoppers discover premium products with a polished, trustworthy online experience.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="category.html">Category</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <a href="mailto:hello@northstar-store.com">hello@northstar-store.com</a>
+                <a href="tel:+15550009999">+1 (555) 000-9999</a>
+                <a href="contact.html">Visit support center</a>
+            </div>
+            <div class="footer-column">
+                <h4>Social</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Northstar Store</span>
+            <span>Built for confident, modern ecommerce.</span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

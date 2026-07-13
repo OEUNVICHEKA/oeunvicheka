@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Northstar Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-shell">
+            <div class="logo">
+                <span class="logo-mark">✦</span>
+                <span>Northstar</span>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="category.html">Category</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn-primary">Login</a>
+                <div class="cart-pill" aria-label="Shopping cart summary">
+                    🛒
+                    <span>Cart</span>
+                    <span class="cart-pill-count" id="cartPillCount">0</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-shell">
+            <section class="page-header reveal">
+                <h1>Elevate every order with premium essentials.</h1>
+                <p>Discover carefully curated products that blend quality, style, and everyday performance.</p>
+            </section>
+
+            <section class="hero-banner reveal">
+                <div class="hero-copy">
+                    <span class="eyebrow">New Season Arrival</span>
+                    <h1>Better products for better living.</h1>
+                    <p class="hero-subtext">From smart technology to refined home picks, our collections are crafted to make modern shopping feel effortless.</p>
+                    <div class="hero-actions">
+                        <a href="category.html" class="btn-primary">Shop Collection</a>
+                        <a href="about.html" class="btn-outline">Why Choose Us</a>
+                    </div>
+                </div>
+
+                <div class="hero-panel">
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <strong>24h</strong>
+                            <span>Fast dispatch on trend picks</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>98%</strong>
+                            <span>Customer satisfaction across top categories</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>8k+</strong>
+                            <span>Happy shoppers and growing every week</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-heading reveal">
+                <h2>Why shoppers choose us</h2>
+                <p>Every purchase is backed by transparent pricing, reliable delivery, and trusted quality standards.</p>
+            </section>
+
+            <section class="features-grid reveal">
+                <div class="feature-card">
+                    <span class="icon">🛍️</span>
+                    <h3>Curated Products</h3>
+                    <p>Carefully selected essentials from top-performing categories.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🚚</span>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick dispatch and dependable shipping that keeps customers moving.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">💳</span>
+                    <h3>Secure Checkout</h3>
+                    <p>Safe, polished shopping that feels trustworthy from start to finish.</p>
+                </div>
+            </section>
+
+            <section class="section-heading reveal">
+                <h2>Featured Products</h2>
+                <p>Best sellers spotlighted to help customers discover standout value instantly.</p>
+            </section>
+
+            <section class="product-grid reveal" id="productGrid">
+                <div class="product-card" data-category="electronics">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Wireless Headphones">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Wireless Bluetooth Headphones</h3>
+                        <div class="product-rating">⭐⭐⭐⭐⭐ (128)</div>
+                        <p class="product-desc">Premium sound quality with noise cancellation, 30-hour battery life.</p>
+                        <div class="product-price">
+                            <span class="price">$79.99</span>
+                            <span class="old-price">$99.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Wireless Bluetooth Headphones', 79.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fashion">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=300&fit=crop" alt="Leather Jacket">
+                        <span class="product-badge bestseller">Bestseller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Leather Jacket</h3>
+                        <div class="product-rating">⭐⭐⭐⭐⭐ (215)</div>
+                        <p class="product-desc">Genuine leather, classic design. Available in 5 colors.</p>
+                        <div class="product-price">
+                            <span class="price">$189.99</span>
+                            <span class="old-price">$249.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Premium Leather Jacket', 189.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="home">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&h=300" alt="Coffee Maker">
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Coffee Maker Pro</h3>
+                        <div class="product-rating">⭐⭐⭐⭐⭐ (203)</div>
+                        <p class="product-desc">Programmable, 12-cup capacity, keep-warm function.</p>
+                        <div class="product-price">
+                            <span class="price">$89.99</span>
+                            <span class="old-price">$119.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Smart Coffee Maker Pro', 89.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="books">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&h=300&fit=crop" alt="Web Development Book">
+                    </div>
+                    <div class="product-info">
+                        <h3>Web Development Mastery</h3>
+                        <div class="product-rating">⭐⭐⭐⭐⭐ (342)</div>
+                        <p class="product-desc">Complete guide to HTML, CSS, JavaScript, and React.</p>
+                        <div class="product-price">
+                            <span class="price">$34.99</span>
+                            <span class="old-price">$44.99</span>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart('Web Development Mastery', 34.99)">Add to Cart 🛒</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>About</h4>
+                <p>Northstar helps shoppers discover premium products with a polished, trustworthy online experience.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="category.html">Category</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <a href="mailto:hello@northstar-store.com">hello@northstar-store.com</a>
+                <a href="tel:+15550009999">+1 (555) 000-9999</a>
+                <a href="contact.html">Visit support center</a>
+            </div>
+            <div class="footer-column">
+                <h4>Social</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Northstar Store</span>
+            <span>Built for confident, modern ecommerce.</span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
